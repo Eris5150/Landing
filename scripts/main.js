@@ -1,32 +1,31 @@
+// Wait until DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
-    //get cards element
+    // Get card elements
     const coffeeCard = document.getElementById("coffee-card");
     const gamesCard = document.getElementById("games-card");
 
-    //Save the original content of the cards
+    // Save original card content
     const coffeeCardContent = coffeeCard.innerHTML;
     const gamesCardContent = gamesCard.innerHTML;
 
-    
-    // Coffee Card Click Event
+    // Toggle coffee card content
     let coffeeCardClicked = false;
     coffeeCard.addEventListener("click", () => {
-        if (!coffeeCardClicked){
+        if (!coffeeCardClicked) {
             coffeeCard.innerHTML = `
-            <h3>Freshly Brewed Coffee</h3>
-            <p>Our coffee is crafted from the finest beans sourced worldwide.</p>
-            <p>Enjoy a variety of options like Espresso, Latte, Cappuccino, and more!</p>
-            <p>Prices start from $3.50 per cup.</p>
+                <h3>Freshly Brewed Coffee</h3>
+                <p>Our coffee is crafted from the finest beans sourced worldwide.</p>
+                <p>Enjoy a variety of options like Espresso, Latte, Cappuccino, and more!</p>
+                <p>Prices start from $3.50 per cup.</p>
             `;
             coffeeCardClicked = true;
         } else {
-            coffeeCard.innerHTML = coffeeCardContent; //restore original content 
-            coffeeCardClicked = false; 
+            coffeeCard.innerHTML = coffeeCardContent;
+            coffeeCardClicked = false;
         }
-
     });
 
-    // Games Card Click Event
+    // Toggle games card content
     let gamesCardClicked = false;
     gamesCard.addEventListener("click", () => {
         if (!gamesCardClicked) {
@@ -42,40 +41,44 @@ document.addEventListener("DOMContentLoaded", () => {
                 </ul>
                 <p>Free to play with any purchase!</p>
             `;
-            gamesCardClicked = true; // Set flag to true
+            gamesCardClicked = true;
         } else {
-            gamesCard.innerHTML = gamesCardContent; // Restore original content
-            gamesCardClicked = false; // Reset flag
+            gamesCard.innerHTML = gamesCardContent;
+            gamesCardClicked = false;
         }
     });
 });
 
-// Get all the gallery items
+// Gallery hover and click effects
 const galleryItems = document.querySelectorAll('.gallery-item');
 
-galleryItems.forEach(item =>{
+galleryItems.forEach(item => {
     const viewMore = item.querySelector('.view-more');
     const moreInfo = item.querySelector('.more-info');
     const image = item.querySelector('img');
 
+    // Hide extra info by default
     moreInfo.style.display = 'none';
 
+    // Show "View More" on hover
     item.addEventListener('mouseenter', () => {
         viewMore.style.opacity = '1';
         viewMore.style.pointerEvents = 'auto';
     });
 
+    // Hide when mouse leaves
     item.addEventListener('mouseleave', () => {
         viewMore.style.opacity = '0';
         viewMore.style.pointerEvents = 'none';
         moreInfo.style.display = 'none';
     });
 
-    viewMore.addEventListener('click', () =>{
+    // Toggle extra info on button or image click
+    viewMore.addEventListener('click', () => {
         moreInfo.style.display = moreInfo.style.display === 'none' ? 'block' : 'none';
     });
 
-    image.addEventListener('click', ()=>{
+    image.addEventListener('click', () => {
         moreInfo.style.display = moreInfo.style.display === 'none' ? 'block' : 'none';
-    })
+    });
 });

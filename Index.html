@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Page metadata and global styles -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
@@ -8,8 +9,8 @@
 </head>
 <body>
 
-
-    <!-- Hero Section -->
+    <!-- ======================= Hero / Landing ======================= -->
+    <!-- Full-bleed hero image with brand, tagline, and primary CTA -->
     <header class="hero">
         <img src="assets/images/hero.jpg" alt="">
         <div class="hero-content">
@@ -20,10 +21,8 @@
         </div>
     </header>
 
-
-
-
-     <!-- Services Section -->
+    <!-- ======================= Services ======================= -->
+    <!-- Two interactive info cards (content toggled by JS) -->
     <section id="services" class="services">
         <h2>What We Offer</h2>
         <div class="service-cards">
@@ -40,78 +39,80 @@
         </div>
     </section>
 
-    <!--About us Section-->
+    <!-- ======================= About ======================= -->
+    <!-- Visual anchor showing the café atmosphere -->
     <div class="about">
         <img src="assets/images/coffeshop.jpeg" alt="coffeeShop">
     </div>
     
+    <!-- ======================= Gallery ======================= -->
+    <!-- Responsive gallery with hover 'View More' interactions (handled in JS) -->
+    <section id="gallery" class="gallery">
+        <h2>Featured</h2>
+        <div class="gallery-container">
+            <div class="gallery-left">
+                <div class="gallery-item" id="gallery1">
+                    <img src="assets/images/coffee2.jpg" alt="Gallery 1">
+                    <strong>Back Coffee</strong>
+                    <div class="view-more">
+                        <span>View More</span>
+                        <div class="more-info">
+                            <p>Our back coffee is made from premium beans and roasted to perfection. Perfect for a strong start to your day.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" id="gallery2">
+                    <img src="assets/images/cold.jpg" alt="Gallery 2">
+                    <strong>Black Cold Brew</strong>
+                    <div class="view-more">
+                        <span>View More</span>
+                        <div class="more-info">
+                            <p>Our cold brew is made by steeping coarsely ground beans in cold water for 12 hours for a smooth, bold taste.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-center">
+                <div class="gallery-item" id="gallery3">
+                    <img src="assets/images/latte.webp" alt="Gallery center Image">
+                    <strong>Latte</strong>
+                    <div class="view-more">
+                        <span>View More</span>
+                        <div class="more-info">
+                            <p>This creamy latte is made with steamed milk and freshly brewed espresso. A classic favorite!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-right">
+                <div class="gallery-item" id="gallery4">
+                    <img src="assets/images/CheeseCake.jpg" alt="Gallery 3">
+                    <strong>CheeseCake</strong>
+                    <div class="view-more">
+                        <span>View More</span>
+                        <div class="more-info">
+                            <p>Delicious cheesecake with a graham cracker crust and smooth, rich filling topped with fresh fruits.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" id="gallery5">
+                    <img src="assets/images/pie.jpg" alt="Gallery 4">
+                    <strong>Apple Pie</strong>
+                    <div class="view-more">
+                        <span>View More</span>
+                        <div class="more-info">
+                            <p>Our signature apple pie features warm, spiced apples wrapped in a buttery, flaky crust. A true comfort food.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Gallery Section -->
-<section id="gallery" class="gallery">
-    <h2>Featured</h2>
-    <div class="gallery-container">
-        <div class="gallery-left">
-            <div class="gallery-item" id="gallery1">
-                <img src="assets/images/coffee2.jpg" alt="Gallery 1">
-                <strong>Back Coffee</strong>
-                <div class="view-more">
-                    <span>View More</span>
-                    <div class="more-info">
-                        <p>Our back coffee is made from premium beans and roasted to perfection. Perfect for a strong start to your day.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="gallery-item" id="gallery2">
-                <img src="assets/images/cold.jpg" alt="Gallery 2">
-                <strong>Black Cold Brew</strong>
-                <div class="view-more">
-                    <span>View More</span>
-                    <div class="more-info">
-                        <p>Our cold brew is made by steeping coarsely ground beans in cold water for 12 hours for a smooth, bold taste.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="gallery-center">
-            <div class="gallery-item" id="gallery3">
-                <img src="assets/images/latte.webp" alt="Gallery center Image">
-                <strong>Latte</strong>
-                <div class="view-more">
-                    <span>View More</span>
-                    <div class="more-info">
-                        <p>This creamy latte is made with steamed milk and freshly brewed espresso. A classic favorite!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="gallery-right">
-            <div class="gallery-item" id="gallery4">
-                <img src="assets/images/CheeseCake.jpg" alt="Gallery 3">
-                <strong>CheeseCake</strong>
-                <div class="view-more">
-                    <span>View More</span>
-                    <div class="more-info">
-                        <p>Delicious cheesecake with a graham cracker crust and smooth, rich filling topped with fresh fruits.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="gallery-item" id="gallery5">
-                <img src="assets/images/pie.jpg" alt="Gallery 4">
-                <strong>Apple Pie</strong>
-                <div class="view-more">
-                    <span>View More</span>
-                    <div class="more-info">
-                        <p>Our signature apple pie features warm, spiced apples wrapped in a buttery, flaky crust. A true comfort food.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-      
-     <div class="bottom">
-            <!--Visit us Section-->
+    <!-- ======================= Visit & Contact ======================= -->
+    <!-- Split bottom section: location/hours and simple contact form -->
+    <div class="bottom">
+        <!-- Visit us details -->
         <section class="visit" id="visit">
             <div>
                 <h2>Come Visit Us</h2>
@@ -122,8 +123,7 @@
             </div>
         </section>
 
-        
-        <!-- Contact Section -->
+        <!-- Contact form (frontend only) -->
         <section id="contact" class="contact">
             <div>
                 <h2>Contact Us</h2>
@@ -135,20 +135,20 @@
                 </form>
             </div>
         </section>
-     </div>
+    </div>
 
-
-
-      <!-- Footer -->
-       <footer>
+    <!-- ======================= Footer ======================= -->
+    <!-- Social links and copyright -->
+    <footer>
         <ul>
             <li><a href="https://instagram.com">Instagram</a></li>
             <li><a href="https://tiktok.com">Tik Tok</a></li>
         </ul>
         <p>&copy: 2024 Brew Haven. All rights reserved.</p>
-       </footer>
+    </footer>
 
-       <script src="scripts/main.js" defer></script>
+    <!-- ======================= Scripts ======================= -->
+    <!-- Interactive behaviors for cards and gallery -->
+    <script src="scripts/main.js" defer></script>
 </body>
 </html>
-
